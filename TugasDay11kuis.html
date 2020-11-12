@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis</title>
+</head>
+<body>
+    1. Siapakah Presiden ketiga Republik Indonesia ?
+    <br><br>
+    <input type="radio" name="satu" value="25">Prof.B.J.Habibie
+    <input type="radio" name="satu" value="0">Abdurrahman Wahid
+    <input type="radio" name="satu" value="0">Ir.Soekarno
+    <input type="radio" name="satu" value="0">Joko Widodo
+    <br><br>
+    2. Berikut adalah nama-nama bahasa pemrograman, kecuali ...
+    <br><br>
+    <input type="radio" name="dua" value="0">Python
+    <input type="radio" name="dua" value="25">Micro:bit
+    <input type="radio" name="dua" value="0">JavaScript
+    <input type="radio" name="dua" value="0">C-Objective
+    <br><br>
+    3. Apa judul lagu yang diduga diplagiat oleh lagu 'Sayang' Via Vallen ?
+    <br><br>
+    <input type="radio" name="tiga" value="0">Qing Fei De Yi
+    <input type="radio" name="tiga" value="0">Ting Hai
+    <input type="radio" name="tiga" value="25">Mirai E Kiroro
+    <input type="radio" name="tiga" value="0">Hau Siang Hau Siang
+    <br><br>
+    4. Siapakah sosok dibalik topeng Batman ?
+    <br><br>
+    <input type="radio" name="empat" value="0">Natasha Romanov
+    <input type="radio" name="empat" value="0">Peter Parker
+    <input type="radio" name="empat" value="0">Tony Stark
+    <input type="radio" name="empat" value="25">Bruce Wayne
+    <br><br>
+    <button> SUBMIT </button>
+</body>
+<script>
+    let button = document.body.getElementsByTagName("button")
+    button[0].addEventListener("click", (event) => {
+        event.preventDefault()
+        
+        let input = document.body.getElementsByTagName("input")
+        
+        let satu
+        if (input[0].checked) {
+            satu = 25
+        } else {
+            satu = 0
+        }console.log(satu)
+
+        let dua
+        if (input[5].checked) {
+            dua = 25
+        } else {
+            dua = 0
+        }console.log(dua)
+
+        let tiga
+        if (input[10].checked) {
+            tiga = 25
+        } else {
+            tiga = 0
+        }console.log(tiga)
+
+        let empat
+        if (input[15].checked) {
+            empat = 25
+        } else {
+            empat = 0
+        }console.log(empat)
+
+        let hasil = parseInt(satu + dua + tiga + empat)
+        console.log(hasil)
+
+        let h1 = document.createElement("h1")
+        document.body.innerHTML += `<br><br>Nilai akhir anda ${hasil}`
+    })
+</script>
+</html>

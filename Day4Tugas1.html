@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas1</title>
+</head>
+<body></body>
+<script>
+
+let bulan = parseInt(prompt ('masukkan bulan'))
+
+switch (true) {
+    case (bulan == 3 || bulan == 4 || bulan == 5):
+        alert(`bulan ${bulan} adalah musim semi`)
+        break
+    case (bulan == 6 || bulan == 7 || bulan == 8):
+        alert(`bulan ${bulan} adalah musim panas`)
+        break
+    case (bulan == 9 || bulan == 10 || bulan == 11):
+        alert(`bulan ${bulan} adalah musim gugur`)
+        break
+    case (bulan == 12 || bulan == 1 || bulan == 2):
+        alert(`bulan ${bulan} adalah musim dingin`)
+        break
+    default:
+        alert(`bulan salah`)
+}
+
+</script>
+</html>

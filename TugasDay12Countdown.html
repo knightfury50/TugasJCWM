@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTDOWN</title>
+</head>
+<body>
+    <center>
+    <form>
+        <h1> COUNTDOWN: </h1>
+        <input type="text" id="input" placeholder="masukkan angka">
+        <button type="button" id="Mulai"> Mulai </button>
+    </form>
+        <h1 id="output"></h1>
+    </center>
+</body>
+<script>
+    
+    window.onload = init
+    function init() {
+        let Mulai = document.getElementById("Mulai")
+        Mulai.onclick = finalCountDown
+    }
+
+function finalCountDown() {setTimeout(countDown(),1000)}
+
+function countDown() {
+    let input = document.getElementById("input")
+    let angka = parseInt(input.value, 10)
+    let output = document.getElementById("output")
+    let interval = setInterval(function() {
+        if (angka > -1) {
+            output.innerText = angka
+            angka--
+        } else {
+            clearInterval(interval)
+        }
+    }, 
+    1000)
+}
+
+</script>
+</html>

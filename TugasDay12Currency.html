@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> KONVERSI MATA UANG </title>
+</head>
+<body>
+    <h1> <center> KONVERSI MATA UANG </center> </h1>
+    <br>
+    <center> <input type="number" placeholder="masukkan angka"> </center>
+    <br>
+    
+    <center>
+    <select>
+        <option value="IDR" id="JPY"> IDR to JPY </option>
+        <option value="JPY" id="IDR"> JPY to IDR </option>
+        <option value="IDR" id="EUR"> IDR to EUR </option>
+        <option value="EUR" id="IDR"> EUR to IDR </option>
+        <option value="JPY" id="EUR"> JPY to EUR </option>
+        <option value="EUR" id="JPY"> EUR to JPY </option>
+    </select> <button> GO </button>
+    </center>
+
+    
+
+</body>
+<script>
+    let input = document.body.getElementsByTagName("input")
+    let option = document.body.getElementsByTagName("option")
+    let button = document.body.getElementsByTagName("button")
+    let hasil = 0
+    
+    button[0].addEventListener("click", function () {
+
+        if (option[0].selected) {
+            hasil += parseInt(input[0].value / 137.52)
+            output = document.createElement("h1")
+            document.body.innerHTML += `<br><center> ${input[0].value} ${option[0].value} = ${hasil} ${option[0].id} </center>`
+        } else if (option[1].selected) {
+            hasil += parseInt(input[0].value * 137.52)
+            output = document.createElement("h1")
+            document.body.innerHTML += `<br><center> ${input[0].value} ${option[1].value} = ${hasil} ${option[1].id} </center>`
+        } else if (option[2].selected) {
+            hasil += parseInt(input[0].value / 16879.18)
+            output = document.createElement("h1")
+            document.body.innerHTML += `<br><center> ${input[0].value} ${option[2].value} = ${hasil} ${option[2].id} </center>`
+        } else if (option[3].selected) {
+            hasil += parseInt(input[0].value * 16879.18)
+            output = document.createElement("h1")
+            document.body.innerHTML += `<br><center> ${input[0].value} ${option[3].value} = ${hasil} ${option[3].id} </center>`
+        } else if (option[4].selected) {
+            hasil += parseInt(input[0].value / 122.74)
+            output = document.createElement("h1")
+            document.body.innerHTML += `<br><center> ${input[0].value} ${option[4].value} = ${hasil} ${option[4].id} </center>`
+        } else {
+            hasil += parseInt(input[0].value * 122.74)
+            output = document.createElement("h1")
+            document.body.innerHTML += `<br><center> ${input[0].value} ${option[5].value} = ${hasil} ${option[5].id} </center>`
+        }
+        console.log(hasil)
+    }
+    )
+    
+</script>
+</html>
